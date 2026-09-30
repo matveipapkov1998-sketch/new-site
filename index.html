@@ -1,0 +1,510 @@
+[30.09.2026 21:20] matthew: <!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Дарья Ковалёва — мастер маникюра</title>
+<meta name="description" content="Маникюр и покрытие гель-лак в Минске. Онлайн-запись за минуту, аккуратная работа, гипоаллергенные материалы.">
+<meta property="og:title" content="Дарья Ковалёва — мастер маникюра">
+<meta property="og:description" content="Маникюр и покрытие гель-лак в Минске. Онлайн-запись за минуту.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --ink: #2B2320;
+    --bg: #F7F1EC;
+    --bg-deep: #EFE4DC;
+    --wine: #6E2A3D;
+    --rose: #C98D93;
+    --gold: #B08968;
+    --line: rgba(43,35,32,0.14);
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', system-ui, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  h1, h2, .display {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-weight: 600;
+    letter-spacing: 0.01em;
+  }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 28px; }
+  img { display: block; max-width: 100%; height: auto; }
+
+  /* HERO */
+  header.hero {
+    padding: 96px 0 80px;
+    background: linear-gradient(180deg, var(--bg) 0%, var(--bg-deep) 100%);
+    border-bottom: 1px solid var(--line);
+  }
+  .hero-grid {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 56px;
+    align-items: end;
+  }
+  .hero-name {
+    font-size: clamp(2.6rem, 6vw, 4.4rem);
+    line-height: 1.05;
+    color: var(--wine);
+  }
+  .hero-tag {
+    margin-top: 18px;
+    max-width: 46ch;
+    font-size: 1.08rem;
+    color: #4a3f3a;
+  }
+  .hero-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 28px 26px;
+    box-shadow: 0 1px 0 rgba(0,0,0,0.02);
+  }
+  .hero-card p { font-size: 0.95rem; color: #5a4d47; }
+  .hero-card .price-line {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line);
+    font-size: 0.95rem;
+  }
+  .hero-card .price-line:last-of-type { border-bottom: none; }
+  .cta {
+    display: inline-block;
+    margin-top: 22px;
+    background: var(--wine);
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 26px;
+    border-radius: 3px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+    transition: background 0.2s ease, transform 0.15s ease;
+  }
+  .cta:hover { background: #582132; transform: translateY(-1px); }
+  .cta:active { transform: translateY(0); }
+
+  /* ABOUT MASTER */
+  section.about { padding: 84px 0; }
+  .about-grid {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+    gap: 48px;
+    align-items: center;
+  }
+  .about-photo {
+    aspect-ratio: 4/5;
+    background: var(--bg-deep);
+    border: 1px dashed var(--line);
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a1908a;
+    font-size: 0.9rem;
+    overflow: hidden;
+  }
+  .about-photo img { width: 100%; height: 100%; object-fit: cover; }
+  .about-text h2 { font-size: 2rem; color: var(--wine); margin-bottom: 18px; }
+  .about-text p { color: #4a3f3a; margin-bottom: 14px; }
+  .about-text .signature {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--gold);
+    margin-top: 10px;
+  }
+
+  /* SERVICES */
+  section.services { padding: 80px 0; background: #fff; }
+  .services h2 { font-size: 2rem; color: var(--wine); margin-bottom: 8px; }
+  .services .sub { color: #6b5d56; margin-bottom: 44px; max-width: 50ch; }
+  .service-grid {
+    display: grid;
+[30.09.2026 21:20] matthew: grid-template-columns: repeat(2, 1fr);
+    gap: 1px;
+    background: var(--line);
+    border: 1px solid var(--line);
+  }
+  .service-item {
+    background: #fff;
+    padding: 30px 32px;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .service-item:hover, .service-item:active {
+    background: var(--bg);
+    transform: translateY(-2px);
+  }
+  .service-item .name { font-size: 1.2rem; font-family: 'Cormorant Garamond', serif; font-weight: 600; }
+  .service-item .desc { font-size: 0.92rem; color: #6b5d56; margin-top: 8px; }
+  .service-item .cost { margin-top: 14px; color: var(--gold); font-weight: 600; font-size: 0.95rem; }
+
+  /* WORKS */
+  section.works {
+    background: var(--wine);
+    color: #F7F1EC;
+    padding: 80px 0;
+  }
+  .works h2 { color: #fff; font-size: 2rem; margin-bottom: 12px; }
+  .works .sub { color: #E7C9CE; max-width: 50ch; margin-bottom: 40px; }
+  .before-after {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+  }
+  .ba-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+    background: rgba(255,255,255,0.06);
+    aspect-ratio: 3/4;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.25s ease;
+  }
+  .ba-card:hover { transform: translateY(-4px); }
+  .ba-card .ph {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #E7C9CE;
+    font-size: 0.85rem;
+    text-align: center;
+    padding: 20px;
+  }
+  .ba-card img { width: 100%; height: 100%; object-fit: cover; }
+  .ba-card .cap {
+    padding: 12px 14px;
+    font-size: 0.85rem;
+    color: #F7F1EC;
+    background: rgba(0,0,0,0.18);
+    text-align: center;
+  }
+  .works .note {
+    margin-top: 24px;
+    font-size: 0.85rem;
+    color: #E7C9CE;
+    max-width: 46ch;
+  }
+
+  /* TESTIMONIALS */
+  section.testimonials { padding: 80px 0; }
+  .testimonials h2 { font-size: 2rem; color: var(--wine); margin-bottom: 44px; }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+  .testi-card {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 24px 22px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  .testi-card:hover { transform: translateY(-3px); box-shadow: 0 10px 26px rgba(0,0,0,0.06); }
+  .testi-card .stars { color: var(--gold); font-size: 0.9rem; margin-bottom: 10px; }
+  .testi-card .quote { font-size: 0.92rem; color: #4a3f3a; margin-bottom: 16px; }
+  .testi-card .who { display: flex; align-items: center; gap: 10px; }
+  .testi-card .avatar {
+    width: 34px; height: 34px;
+    border-radius: 50%;
+    background: var(--wine);
+    color: #fff;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.8rem; font-weight: 600;
+    flex-shrink: 0;
+  }
+  .testi-card .name { font-size: 0.88rem; font-weight: 500; }
+
+  /* CONTACT */
+  section.contact { padding: 84px 0 96px; text-align: center; background: var(--bg-deep); }
+  .contact h2 { font-size: 2.1rem; color: var(--wine); }
+  .contact p { margin: 14px auto 30px; max-width: 42ch; color: #5a4d47; }
+  .contact-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+  .btn-outline {
+    border: 1px solid var(--wine);
+    color: var(--wine);
+    padding: 12px 24px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 0.95rem;
+    display: inline-flex;
+    align-items: center;
+    background: transparent;
+    transition: background 0.2s ease, color 0.2s ease;
+  }
+  .btn-outline:hover, .btn-outline:active {
+    background: var(--wine);
+    color: #fff;
+  }
+
+  footer {
+    border-top: 1px solid var(--line);
+    padding: 26px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #8a7a72;
+  }
+
+  /* SCROLL REVEAL */
+  .reveal {
+    opacity: 0;
+    transform: translateY(22px);
+    transition: opacity 0.7s ease, transform 0.7s ease;
+  }
+  .reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .reveal-stagger.is-visible > * {
+    animation: fadeUp 0.6s ease forwards;
+  }
+  .
+[30.09.2026 21:20] matthew: reveal-stagger > *:nth-child(1) { animation-delay: 0.05s; }
+  .reveal-stagger > *:nth-child(2) { animation-delay: 0.15s; }
+  .reveal-stagger > *:nth-child(3) { animation-delay: 0.25s; }
+  .reveal-stagger > *:nth-child(4) { animation-delay: 0.35s; }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(18px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .reveal-stagger > * { opacity: 0; }
+
+  /* PULSE */
+  .pulse {
+    display: inline-block;
+    animation: pulse 2s ease-in-out infinite;
+  }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.55; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .reveal, .reveal-stagger > *, .pulse {
+      animation: none !important;
+      transition: none !important;
+      opacity: 1 !important;
+      transform: none !important;
+    }
+  }
+
+  /* MOBILE STICKY CTA */
+  .mobile-cta { display: none; }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 0 20px; }
+    .hero-grid { grid-template-columns: 1fr; gap: 32px; }
+    .service-grid { grid-template-columns: 1fr; }
+    header.hero { padding: 48px 0 40px; }
+    .hero-name { font-size: clamp(2.1rem, 9vw, 2.8rem); }
+    .hero-tag { font-size: 1rem; }
+    section.services, section.works, section.testimonials { padding: 52px 0; }
+    section.about { padding: 52px 0; }
+    section.contact { padding: 52px 0 120px; }
+    .about-grid { grid-template-columns: 1fr; gap: 28px; }
+    .contact-buttons { flex-direction: column; }
+    .contact-buttons a { width: 100%; text-align: center; justify-content: center; }
+    .cta, .btn-outline { padding: 15px 22px; font-size: 1rem; }
+    .testi-grid { grid-template-columns: 1fr; }
+    .before-after { grid-template-columns: 1fr; }
+
+    .mobile-cta {
+      display: block;
+      position: fixed;
+      left: 0; right: 0; bottom: 0;
+      z-index: 20;
+      background: rgba(247,241,236,0.92);
+      backdrop-filter: blur(6px);
+      border-top: 1px solid var(--line);
+      padding: 12px 20px calc(12px + env(safe-area-inset-bottom, 0px));
+    }
+    .mobile-cta a {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background: var(--wine);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px;
+      border-radius: 3px;
+      font-weight: 500;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 380px) {
+    .hero-card { padding: 22px 18px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <h1 class="hero-name">Дарья Ковалёва</h1>
+      <p class="hero-tag">Мастер маникюра и покрытия в Минске. Аккуратная работа, стерильные инструменты, запись в удобное время — без долгого ожидания ответа.</p>
+      <a class="cta" href="https://t.me/darya_manicure_bot" target="_blank" rel="noopener">Записаться</a>
+    </div>
+    <div class="hero-card">
+      <p style="font-family:'Cormorant Garamond',serif; font-size:1.05rem; color:var(--wine); margin-bottom:10px;">Популярные позиции</p>
+      <div class="price-line"><span>Маникюр + покрытие</span><span>35 руб.</span></div>
+      <div class="price-line"><span>Дизайн (1 ноготь)</span><span>от 2 руб.</span></div>
+      <div class="price-line"><span>Снятие + маникюр</span><span>40 руб.</span></div>
+      <p style="margin-top:14px; font-size:0.82rem; color:var(--gold);"><span class="pulse">🔥</span> На этой неделе осталось 3 свободных окна</p>
+    </div>
+  </div>
+</header>
+
+<section class="about reveal">
+  <div class="wrap about-grid">
+    <div class="about-photo">
+      <img src="images/master.jpg" alt="Дарья Ковалёва — мастер маникюра"
+           onerror="this.style.display='none'; this.parentNode.insertAdjacentText('beforeend','Фото мастера');">
+    </div>
+    <div class="about-text">
+      <h2>О мастере</h2>
+      <p>Меня зовут Дарья, и уже более пяти лет я делаю маникюр в Минске. За это время через мои руки прошло больше двух тысяч пар ногтей — и каждая была для меня особенной.</p>
+[30.09.2026 21:20] matthew: <p>Я работаю с гипоаллергенными материалами, использую только стерильные инструменты и никогда не тороплюсь: одна запись — это спокойные 1,5–2 часа, полностью посвящённые вам.</p>
+      <p>Люблю аккуратные, ухоженные ногти, которые выглядят естественно и держатся долго. Приходите — обсудим вашу идею.</p>
+      <p class="signature">— Дарья, с любовью к своему делу</p>
+    </div>
+  </div>
+</section>
+
+<section class="services reveal">
+  <div class="wrap">
+    <h2>Услуги</h2>
+    <p class="sub">Каждая запись — 1,5–2 часа, без спешки. Материалы гипоаллергенные.</p>
+    <div class="service-grid reveal-stagger">
+      <div class="service-item">
+        <div class="name">Классический маникюр</div>
+        <div class="desc">Обработка кутикулы, форма, полировка.</div>
+        <div class="cost">от 20 руб.</div>
+      </div>
+      <div class="service-item">
+        <div class="name">Гель-лак</div>
+        <div class="desc">Покрытие держится 3–4 недели без сколов.</div>
+        <div class="cost">от 35 руб.</div>
+      </div>
+      <div class="service-item">
+        <div class="name">Дизайн ногтей</div>
+        <div class="desc">Френч, омбре, втирка, стразы — по вашему вкусу.</div>
+        <div class="cost">от 2 руб./ноготь</div>
+      </div>
+      <div class="service-item">
+        <div class="name">Педикюр</div>
+        <div class="desc">Аппаратная обработка, покрытие на выбор.</div>
+        <div class="cost">от 45 руб.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="works reveal">
+  <div class="wrap">
+    <h2>Последние работы</h2>
+    <p class="sub">Немного из того, что делаю чаще всего — от базового покрытия до сложного дизайна.</p>
+    <div class="before-after reveal-stagger">
+      <div class="ba-card">
+        <div class="ph">
+          <img src="images/work-1.jpg" alt="Работа №1 — до и после"
+               onerror="this.style.display='none'; this.parentNode.insertAdjacentText('beforeend','Фото работы №1');">
+        </div>
+        <div class="cap">Нюд + глянец</div>
+      </div>
+      <div class="ba-card">
+        <div class="ph">
+          <img src="images/work-2.jpg" alt="Работа №2 — до и после"
+               onerror="this.style.display='none'; this.parentNode.insertAdjacentText('beforeend','Фото работы №2');">
+        </div>
+        <div class="cap">Бордо + френч</div>
+      </div>
+      <div class="ba-card">
+        <div class="ph">
+          <img src="images/work-3.jpg" alt="Работа №3 — до и после"
+               onerror="this.style.display='none'; this.parentNode.insertAdjacentText('beforeend','Фото работы №3');">
+        </div>
+        <div class="cap">Молочный + дизайн</div>
+      </div>
+    </div>
+    <p class="note">Немного примеров до/после — от натурального состояния ногтей до готового покрытия.</p>
+  </div>
+</section>
+
+<section class="testimonials reveal">
+  <div class="wrap">
+    <h2>Отзывы</h2>
+    <div class="testi-grid reveal-stagger">
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Записалась впервые — понравилось, что всё чётко по времени, без ожидания. Маникюр держится уже третью неделю.</p>
+        <div class="who"><div class="avatar">МК</div><div class="name">Марина К.</div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Аккуратно, стерильно, приятная атмосфера. Записаться через бота оказалось быстрее, чем писать в директ.</p>
+        <div class="who"><div class="avatar">ОС</div><div class="name">Ольга С.</div></div>
+      </div>
+      <div class="testi-card">
+        <div class="stars">★★★★★</div>
+        <p class="quote">Хожу уже полгода, ни разу не подвела по времени. Рекомендую всем подругам.</p>
+        <div class="who"><div class="avatar">ЕВ</div><div class="name">Елена В.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="contact reveal" id="contact">
+  <div class="wrap">
+    <h2>Записаться на маникюр</h2>
+    <p>Ответ обычно в течение часа. Можно написать в Telegram-бота — он покажет свободное время и запишет автоматически.</p>
+[30.09.2026 21:20] matthew: <div class="contact-buttons">
+      <a class="cta" href="https://t.me/darya_manicure_bot" style="margin-top:0;" target="_blank" rel="noopener">Записаться в боте</a>
+      <a class="btn-outline" href="https://t.me/motya_18" target="_blank" rel="noopener">
+        Написать в Telegram
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  Минск · пример сайта-визитки · сделано для портфолио
+</footer>
+
+<div class="mobile-cta">
+  <a href="https://t.me/darya_manicure_bot" target="_blank" rel="noopener">Записаться на маникюр</a>
+</div>
+
+<script>
+  const revealEls = document.querySelectorAll('.reveal, .reveal-stagger');
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    revealEls.forEach((el) => observer.observe(el));
+  } else {
+    revealEls.forEach((el) => el.classList.add('is-visible'));
+  }
+</script>
+
+</body>
+</html>
